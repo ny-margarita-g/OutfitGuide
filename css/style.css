@@ -1,0 +1,596 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Playfair+Display:wght@300;400;600&display=swap');
+
+/* Colours*/
+:root {
+  --soft-blush: #ffe5ec;
+  --pastel-pink: #ffc2d1;
+  --cherry-blossom: #ffb3c6;
+  --cotton-candy: #ff8fab;
+  --petal-rouge: #db5375;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--soft-blush);
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*  
+   Headings and Text*/
+h1 {
+  font-family: "Parisienne", cursive;
+  font-size: 64px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  white-space: nowrap;
+}
+
+h2 {
+  font-family: "Parisienne", cursive;
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--petal-rouge);
+  margin: 40px 0 20px 0;
+}
+
+p {
+  font-size: 16px;
+  margin: 10px 0 20px 0;
+  color: rgb(0, 0, 0);
+  font-family: "Playfair Display", serif;
+}
+
+strong {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--cotton-candy);
+  margin: 20px 0;
+}
+
+ul {
+  margin: 0 0 20px 15px;
+}
+
+::selection {
+  background: var(--petal-rouge);
+  color: rgb(255, 255, 255);
+}
+
+/*  
+   Header
+     */
+header {
+  background-color: var(--petal-rouge);
+  color: rgb(255, 255, 255);
+  padding: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: visible;
+  min-height: 100px;
+}
+
+.titel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.logo-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/*  
+   Navigation
+     */
+nav {
+  display: flex;
+  gap: 12px;
+  font-family: "Playfair Display", serif;
+  margin-left: auto; 
+}
+
+nav a {
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Playfair Display", serif;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.arrow a {
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Playfair Display", serif;
+}
+
+.arrow a:hover {
+  text-decoration: underline;
+}
+
+/*  
+   Burger Menu
+     */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.burger span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: rgb(255, 255, 255);
+  border-radius: 3px;
+}
+
+/*  
+   Footer
+     */
+footer {
+  background-color: var(--petal-rouge);
+  padding: 30px 40px;
+  color: rgb(255, 255, 255);
+  margin-top: auto;
+}
+
+footer strong {
+  color: rgb(255, 255, 255);
+}
+
+/*  
+   Welcome Section
+     */
+.welcome {
+  margin: 60px 120px 0 120px;
+}
+
+/*  
+   Landing Page (index.html)
+     */
+.landing-welcome {
+  text-align: center;
+}
+
+.landing-welcome h2 {
+  font-size: 64px;
+}
+
+.landing-welcome p {
+  font-size: 19px;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+}
+
+.landing-welcome .see-all {
+  font-size: 19px;
+  padding: 20px 60px;
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+}
+
+.intro-img {
+  width: 80%;
+  border-radius: 20px;
+  margin: 20px 0;
+}
+
+/*  
+   Main Grid
+     */
+main {
+  margin: 60px 120px 80px 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/*  
+   Place cards
+     */
+.place-box{
+  background-color: rgba(255, 194, 209, 0.5);
+  border: 1px solid var(--cherry-blossom);
+  border-radius: 40px;
+  padding: 30px 35px 35px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background-color 0.4s, border-color 0.4s;
+}
+
+.place-box:hover {
+  background-color: rgba(255, 143, 171, 0.4);
+  border-color: var(--cotton-candy);
+}
+
+.place-boxh2 {
+  margin: 0;
+}
+
+.place-boxp {
+  color: var(--petal-rouge);
+  font-size: 15px;
+  margin: 8px 0 12px 0;
+}
+
+main a {
+  color: var(--petal-rouge);
+}
+
+main a:hover {
+  color: var(--cotton-candy);
+  transition: color 0.5s;
+}
+
+/*  
+   See All Button
+     */
+.see-all {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  background-color: var(--petal-rouge);
+  padding: 10px 24px;
+  border-radius: 100px;
+  align-self: flex-start;
+  transition: background-color 0.3s;
+}
+
+.place-box:hover .see-all {
+  background-color: var(--cotton-candy);
+}
+
+/*  
+   Images
+     */
+img {
+  width: 200px;
+}
+
+.place-box-content img {
+  width: 48%;
+  border-radius: 16px;
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
+}
+
+.image-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+/* About Page  */
+.avatar {
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+
+/*  Login Page */
+.login-main {
+  display: flex;
+  justify-content: center;
+  margin: 40px 20px 80px 20px;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 460px;
+}
+
+.forgot-link {
+  display: block;
+  text-align: right;
+  font-size: 14px;
+  color: var(--petal-rouge);
+  text-decoration: underline;
+  margin-bottom: 16px;
+}
+
+/*  Forms (contact, login) */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--petal-rouge);
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--pastel-pink);
+  border-radius: 100px;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group textarea {
+  border-radius: 20px;
+  resize: vertical;
+  min-height: 110px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--petal-rouge);
+}
+
+.btn-login {
+  display: block;
+  width: 100%;
+  background: var(--petal-rouge);
+  color: rgb(255, 255, 255);
+  padding: 12px 20px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-family: 'Playfair Display', serif;
+  transition: background 0.2s;
+  text-align: center;
+}
+
+.btn-login:hover {
+  background: var(--cotton-candy);
+}
+
+/*  Login Modal*/
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal {
+  background: var(--soft-blush);
+  border-radius: 40px;
+  padding: 40px;
+  width: 100%;
+  max-width: 380px;
+  border: 1px solid var(--pastel-pink);
+}
+
+.modal h2 {
+  font-size: 32px;
+  margin-bottom: 4px;
+}
+
+.modal .sub {
+  color: var(--petal-rouge);
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.modal .forgot {
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  color: var(--petal-rouge);
+  text-decoration: underline;
+  margin-bottom: 16px;
+}
+
+.modal .close {
+  display: block;
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--petal-rouge);
+  cursor: pointer;
+}
+
+/*  Place Detail Pages */
+.place-header {
+  background-color: var(--petal-rouge);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.place-header .back {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.place-header .back:hover {
+  color: rgb(255, 255, 255);
+}
+
+.place-header h1 {
+  font-size: 48px;
+  position: static;
+  transform: none;
+  left: auto;
+  top: auto;
+  white-space: normal;
+  margin-bottom: 8px;
+}
+
+.place-header p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  margin: 0;
+}
+
+.outfits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 860px;
+  margin: 60px auto 80px auto;
+  padding: 0 24px;
+}
+
+.outfit-card {
+  background: rgba(255, 194, 209, 0.4);
+  border: 1px solid var(--cherry-blossom);
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.outfit-card .visual {
+  background: var(--petal-rouge);
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 72px;
+}
+
+.outfit-card .body {
+  padding: 28px;
+}
+
+.outfit-card .label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--petal-rouge);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.outfit-card h3 {
+  font-family: "Parisienne", cursive;
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--petal-rouge);
+  margin: 0 0 10px 0;
+}
+
+.outfit-card p {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.outfit-card ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+}
+
+.outfit-card ul li {
+  background: rgb(255, 255, 255);
+  border: 1px solid var(--pastel-pink);
+  border-radius: 100px;
+  padding: 4px 14px;
+  font-size: 12px;
+}
+
+/*  Responsive */
+@media (max-width: 768px) {
+  header {
+    padding: 50px 20px;
+  }
+  h1 {
+    font-size: 45px;
+  }
+  h2 {
+    font-size: 35px;
+  }
+  .welcome {
+    margin: 30px 20px 0 20px;
+    text-align: center;
+  }
+  .landing-welcome h2 {
+    font-size: 40px;
+  }
+  .landing-welcome p {
+    font-size: 16px;
+  }
+  main {
+    grid-template-columns: 1fr;
+    margin: 30px 20px 40px 20px;
+    gap: 20px;
+  }
+  .outfits-grid {
+    grid-template-columns: 1fr;
+  }
+  .burger {
+    display: flex;
+  }
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--petal-rouge);
+    padding: 20px 32px;
+    gap: 16px;
+    z-index: 10;
+  }
+  nav.open {
+    display: flex;
+  }
+}
