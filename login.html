@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login – Outfit Guide</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="titel">
+      <h1>Outfit Guide</h1>
+      <img src="images/logo.png" alt="Outfit Guide Logo" class="logo-img"> 
+    </div>
+    <nav id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="explore.html">Outfits</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="burger" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+  </header>
+
+ <section class="welcome landing-welcome">
+    <h2>Welcome back</h2>
+    <p>Log in to save your favourite outfits.</p>
+  </section>
+
+  <main class="login-main">
+    <div class="place-box login-box">
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="your@email.com">
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" placeholder="Your password">
+      </div>
+      <button class="see-all" onclick="window.location.href='explore.html'">Login →</button>
+      <hr>
+      <a href="password-forgot.html">Forgot password?</a>
+    </div>
+  </main>
+
+  <footer>
+    <strong>Outfit Guide</strong><br>
+    <strong>Margarita Grigoreva</strong>
+  </footer>
+<script src="js/main.js"></script>
+</body>
+
+</html>
